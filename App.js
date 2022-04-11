@@ -17,10 +17,12 @@ export default function App() {
         token,
       } = await Facebook.logInWithReadPermissionsAsync({
         permissions: ['public_profile'],
+        
       });
       if (type === 'success') {
         //We are using facebook graph API here
-        fetch(`https://graph.facebook.com/me?access_token=${token}&fields=id,name,email,picture`)
+        console.log("Entrou!")
+        fetch(`https://graph.facebook.com/me?access_token=${token}&fields=id,name,email,picture.height(500)`)
           .then(response => response.json())
           .then(data => {
             setLoggedinStatus(true);
