@@ -13,7 +13,7 @@ export default function App() {
     
     try {
       await Facebook.initializeAsync({
-        appId: 'xxxxxxxxxxxxxxx',      // enter app id here
+        appId: '780536156251529',      // enter app id here
         
       });
       const {
